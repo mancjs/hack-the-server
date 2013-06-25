@@ -1,9 +1,9 @@
 var db = require('../lib/db');
+var _ = require('underscore');
 
 var routes = function(app) {
   app.get('/', function(req, res) {
-    var data = db.getData();
-    return res.send('teams: ' + data.teams.length);
+    return res.json(db.getTeams());
   });
 };
 
