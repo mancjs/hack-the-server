@@ -1,0 +1,18 @@
+{
+  "name": "hack-the-server",
+  "version": "0.0.1",
+  "description": "MancJS Hack The Server challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Martin Rue",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.2.6",
+    "underscore": "~1.4.4",
+    "mustachex": "0.0.2",
+    "moment": "~2.0.0"
+  }
+}
