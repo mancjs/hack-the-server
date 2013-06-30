@@ -35,6 +35,12 @@ var routes = function(app) {
   app.get('/renderteams', function(req, res) {
     return res.render('teams', getTeamData());
   });
+
+  app.get('/keys', function(req, res) {
+    var team = db.getTeam(req.param('id'));
+    if (!team) return res.json({ error: 'forget your id?' });
+    return res.json({ key: team.theirKey });
+  });
 };
 
 module.exports = routes;

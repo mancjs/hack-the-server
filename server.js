@@ -39,5 +39,6 @@ require('./routes/challenge3')(app);
 require('./routes/challenge4')(app);
 require('./routes/challenge5')(app);
 require('./routes/challenge6')(app);
+require('./routes/challenge7')(app);
 
 http.createServer(app).listen(8808);
