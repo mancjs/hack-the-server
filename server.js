@@ -5,6 +5,7 @@ var throttle = require('./lib/throttle');
 var db = require('./lib/db');
 
 var app = express();
+throttle.enable();
 
 app.configure(function() {
   app.engine('html', mustachex.express);
@@ -18,6 +19,13 @@ app.configure(function() {
 });
 
 app.all('*', function(req, res, next) {
+  if (req.url === '/' || req.url === '/favicon.ico' || req.url === '/renderteams' || req.url.match(/^\/event/g) || req.url.match(/^\/debug/g)) {
+    return next();
+  }
+
+  console.log('not skipping');
+  console.log(req.url);
+
   var throttled = throttle.isThrottled(req.connection.remoteAddress);
   return throttled ? res.json({ error: 'enhance your calm John Spartan', bannedFor: '2 minutes' }) : next();
 });

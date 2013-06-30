@@ -5,9 +5,6 @@ var getTeamData = function() {
   var setMustacheStageKey = function(team) {
     _.each(_.range(1, 8), function(number) {
       team['stage' + number] = team.stage === number;
-      //team['trophy'] = 'bronze';
-      //team['place'] = '3rd';
-      //team['medal'] = true;
     });
   };
 
