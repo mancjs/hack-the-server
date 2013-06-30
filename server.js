@@ -12,19 +12,14 @@ app.configure(function() {
   app.set('view engine', 'html');
   app.set('views', __dirname + '/views');
   app.use(express.bodyParser({ uploadDir: __dirname + '/uploaded' }));
-  app.use(express.methodOverride());
-  app.use(express.cookieParser());
   app.use(express.static(__dirname + '/public'));
   app.use(app.router);
 });
 
 app.all('*', function(req, res, next) {
-  if (req.url === '/' || req.url === '/favicon.ico' || req.url === '/renderteams' || req.url.match(/^\/event/g) || req.url.match(/^\/debug/g)) {
+  if (req.url === '/' || req.url === '/favicon.ico' || req.url === '/renderteams' || req.url.match(/^\/event/g) || req.url.match(/^\/debug/g) || req.url.match(/^\/finish/g)) {
     return next();
   }
-
-  console.log('not skipping');
-  console.log(req.url);
 
   var throttled = throttle.isThrottled(req.connection.remoteAddress);
   return throttled ? res.json({ error: 'enhance your calm John Spartan', bannedFor: '2 minutes' }) : next();
@@ -40,5 +35,6 @@ require('./routes/challenge4')(app);
 require('./routes/challenge5')(app);
 require('./routes/challenge6')(app);
 require('./routes/challenge7')(app);
+require('./routes/saboteur')(app);
 
 http.createServer(app).listen(8808);

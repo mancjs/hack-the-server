@@ -15,7 +15,7 @@ var showNextEvent = function() {
   };
 
   $.get('/event/' + localStorage['eventIndex'], function(ev) {
-    ev ? showEvent(ev) : setTimeout(showNextEvent, 2000);
+    ev ? showEvent(ev) : setTimeout(showNextEvent, 3000);
   });
 };
 
@@ -30,9 +30,12 @@ $(function() {
   $('.modal').on('hidden', function () {
     eventBeingShown = false;
     localStorage['eventIndex']++;
-    setTimeout(showNextEvent, 2000);
+    setTimeout(showNextEvent, 3000);
   });
 
   setInterval(loadTeams, 1000);
-  setTimeout(showNextEvent, 2000);
+  setTimeout(showNextEvent, 3000);
 });
+
+// all your base64 are belong to us
+// L2JlY29tZV90aGVfc2Fib3RldXI=
