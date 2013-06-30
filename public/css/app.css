@@ -1,0 +1,141 @@
+body {
+  font-size: 27px;
+  font-family: Helvetica, 'Helvetica Neue', Arial;
+  color: #444;
+}
+
+.modal-backdrop {
+  background-color: #bbb;
+}
+
+.container {
+  margin: 20px auto;
+  width: 1100px;
+}
+
+.team-container {
+  float: left;
+  width: 550px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 300;
+  margin: 0 0 40px 0;
+  color: #777;
+}
+
+.faded {
+  opacity: 0.3;
+}
+
+.team-name {
+  padding: 10px 0;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #555;
+}
+
+.stages {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.stages .gravatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 3px #fff;
+}
+
+.stages .unverified {
+  padding: 5px 10px;
+  float: left;
+}
+
+.stages .number {
+  float: left;
+  padding: 10px 17px;
+  margin: 7px 0;
+  text-shadow: 1px 1px #fff;
+  color: #ccc;
+  font-size: 40px;
+}
+
+.stages .stage {
+  float: left;
+  width: 55px;
+  height: 55px;
+  background: #f0f0f0;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+}
+
+.modal {
+  padding: 20px;
+}
+
+.modal h3 {
+  font-size: 40px;
+  padding: 10px 0;
+}
+
+.modal h4 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 35px;
+  font-weight: 400;
+  width: 400px;
+}
+
+.modal img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.team {
+  position: relative;
+}
+
+.complete {
+  font-size: 150px;
+  position: absolute;
+  left: 36%;
+  top: 5%;
+}
+
+.complete-gold {
+  color: gold;
+}
+
+.complete-silver {
+  color: silver;
+}
+
+.complete-bronze {
+  color: #a57164;
+}
+
+.complete .place {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  color: #000;
+  opacity: 1;
+  width: 60px;
+  text-align: center;
+  font-size: 35px;
+  font-family: Helvetica;
+}
+
+.thumbs-up {
+  color: #444;
+  font-size: 90px;
+  top: 26%;
+  left: 41%;
+}

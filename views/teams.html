@@ -1,0 +1,82 @@
+<div class="team-container">
+  {{#teamsLeft}}
+  <div class="{{^valid}}faded{{/valid}} team">
+
+    {{#trophy}}
+    <span class="icon-trophy complete complete-{{trophy}}">
+      <span class="place">{{place}}</span>
+    </span>
+    {{/trophy}}
+
+    {{#medal}}
+    <span class="icon-thumbs-up complete thumbs-up"></span>
+    {{/medal}}
+
+    <div class="{{#trophy}}faded{{/trophy}} {{#medal}}faded{{/medal}}">
+      <div class="team-name">
+        {{name}}
+      </div>
+
+      <div class="stages">
+
+        {{#stage1}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage1}}
+        {{^stage1}}<div class="stage"><span class="number">1</span></div>{{/stage1}}
+
+        {{#stage2}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage2}}
+        {{^stage2}}<div class="stage"><span class="number">2</span></div>{{/stage2}}
+
+        {{#stage3}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage3}}
+        {{^stage3}}<div class="stage"><span class="number">3</span></div>{{/stage3}}
+
+        {{#stage4}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage4}}
+        {{^stage4}}<div class="stage"><span class="number">4</span></div>{{/stage4}}
+
+        {{#stage5}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage5}}
+        {{^stage5}}<div class="stage"><span class="number">5</span></div>{{/stage5}}
+
+        {{#stage6}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage6}}
+        {{^stage6}}<div class="stage"><span class="number">6</span></div>{{/stage6}}
+
+        {{#stage7}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage7}}
+        {{^stage7}}<div class="stage"><span class="number">7</span></div>{{/stage7}}
+
+      </div>
+    </div>
+  </div>
+  {{/teamsLeft}}
+</div>
+
+<div class="team-container">
+  {{#teamsRight}}
+  <div class="{{^valid}}faded{{/valid}}">
+    <div class="team-name">
+      {{name}}
+    </div>
+
+    <div class="stages">
+
+      {{#stage1}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage1}}
+      {{^stage1}}<div class="stage"><span class="number">1</span></div>{{/stage1}}
+
+      {{#stage2}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage2}}
+      {{^stage2}}<div class="stage"><span class="number">2</span></div>{{/stage2}}
+
+      {{#stage3}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage3}}
+      {{^stage3}}<div class="stage"><span class="number">3</span></div>{{/stage3}}
+
+      {{#stage4}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage4}}
+      {{^stage4}}<div class="stage"><span class="number">4</span></div>{{/stage4}}
+
+      {{#stage5}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage5}}
+      {{^stage5}}<div class="stage"><span class="number">5</span></div>{{/stage5}}
+
+      {{#stage6}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage6}}
+      {{^stage6}}<div class="stage"><span class="number">6</span></div>{{/stage6}}
+
+      {{#stage7}}<div class="stage"><img src="{{gravatar}}" class="gravatar" /></div>{{/stage7}}
+      {{^stage7}}<div class="stage"><span class="number">7</span></div>{{/stage7}}
+
+    </div>
+  </div>
+  {{/teamsRight}}
+</div>
