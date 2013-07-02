@@ -21,10 +21,13 @@ var getTeamData = function() {
 
   var midPoint = Math.max(Math.ceil(teams.length / 2), 3);
 
-  return {
+  var response = {
     teamsLeft: teams.slice(0, midPoint),
-    teamsRight: teams.slice(midPoint)
+    teamsRight: teams.slice(midPoint),
   };
+
+  response.noTeams = !response.teamsLeft.length && !response.teamsRight.length;
+  return response;
 };
 
 var routes = function(app) {

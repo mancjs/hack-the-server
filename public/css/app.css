@@ -139,3 +139,9 @@ h1 {
   top: 26%;
   left: 41%;
 }
+
+.no-teams {
+  font-size: 50px;
+  font-weight: 300;
+  color: #999;
+}

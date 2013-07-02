@@ -28,8 +28,7 @@ var routes = function(app) {
     return res.json({
       msg: 'not bad, not bad',
       nextUrl: '/challenge4',
-      hint: 'POST a file that is exactly X KiB in size, where X is the answer to the ultimate question of life, the universe, and everything',
-      help: 'if you need help POSTing a file, here\'s a snippet that will help: https://gist.github.com/martinrue/f70b1e5c895e1ded8a62'
+      hint: 'POST a file that is exactly X KiB in size, where X is the answer to the ultimate question of life, the universe, and everything'
     });
   });
 };
