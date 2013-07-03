@@ -22,7 +22,7 @@ app.all('*', function(req, res, next) {
   }
 
   var throttled = throttle.isThrottled(req.connection.remoteAddress);
-  return throttled ? res.json({ error: 'enhance your calm John Spartan', bannedFor: '2 minutes' }) : next();
+  return throttled ? res.json({ error: 'enhance your calm John Spartan', bannedFor: '1 minute' }) : next();
 });
 
 require('./routes/debug')(app);
