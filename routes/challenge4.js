@@ -1,8 +1,13 @@
+var fs = require('fs');
 var db = require('../lib/db');
 var events = require('../lib/events');
 
 var routes = function(app) {
   app.post('/challenge4', function(req, res) {
+
+    var stats = fs.statSync(req.files.file.path)
+    console.log(stats.size);
+
     if (!req.files.file) return res.json({ error: 'no file was POSTed for key `file`' });
     if (req.files.file.size === 42 * 1000) return res.json({ error: 'KiB?' });
     if (req.files.file.size !== 42 * 1024) return res.json({ error: 'file is the wrong size' });
