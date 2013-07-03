@@ -1,6 +1,6 @@
 body {
   font-size: 27px;
-  font-family: Helvetica, 'Helvetica Neue', Arial;
+  font-family: 'Helvetica Neue', Arial;
   color: #444;
 }
 
@@ -20,7 +20,7 @@ body {
 
 h1 {
   font-size: 60px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 40px 0;
   color: #777;
 }
@@ -153,7 +153,7 @@ h1 {
 }
 
 .no-teams {
-  font-size: 50px;
-  font-weight: 300;
-  color: #999;
+  font-size: 60px;
+  font-weight: 400;
+  color: #aaa;
 }
