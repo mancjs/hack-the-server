@@ -140,6 +140,18 @@ h1 {
   left: 41%;
 }
 
+.sabotaged {
+  color: #444;
+  font-size: 90px;
+  top: 26%;
+  left: 41%;
+  color: #ff3333;
+}
+
+.sabotaged-name {
+  color: #ff0000;
+}
+
 .no-teams {
   font-size: 50px;
   font-weight: 300;

@@ -12,8 +12,12 @@
     <span class="icon-thumbs-up complete thumbs-up"></span>
     {{/medal}}
 
-    <div class="{{#trophy}}faded{{/trophy}} {{#medal}}faded{{/medal}}">
-      <div class="team-name">
+    {{#sabotaged}}
+    <span class="icon-frown complete sabotaged"></span>
+    {{/sabotaged}}
+
+    <div class="{{#trophy}}faded{{/trophy}} {{#medal}}faded{{/medal}} {{#sabotaged}}faded{{/sabotaged}}">
+      <div class="team-name {{#sabotaged}}sabotaged-name{{/sabotaged}}">
         {{name}}
       </div>
 
@@ -60,8 +64,12 @@
     <span class="icon-thumbs-up complete thumbs-up"></span>
     {{/medal}}
 
-    <div class="{{#trophy}}faded{{/trophy}} {{#medal}}faded{{/medal}}">
-      <div class="team-name">
+    {{#sabotaged}}
+    <span class="icon-frown complete sabotaged"></span>
+    {{/sabotaged}}
+
+    <div class="{{#trophy}}faded{{/trophy}} {{#medal}}faded{{/medal}} {{#sabotaged}}faded{{/sabotaged}}">
+      <div class="team-name {{#sabotaged}}sabotaged-name{{/sabotaged}}">
         {{name}}
       </div>
 

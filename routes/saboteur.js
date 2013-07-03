@@ -3,7 +3,7 @@ var crypto = require('crypto');
 var db = require('../lib/db');
 var events = require('../lib/events');
 
-var saboteurPort = 30581;
+var saboteurPort = 48909;
 
 var routes = function(app) {
   app.get('/become_the_saboteur', function(req, res) {
@@ -15,18 +15,20 @@ var routes = function(app) {
     var team = db.getTeam(id);
     if (!team) return res.json({ error: 'invalid team id' });
 
-    events.add(team, 'Is attempting to become the saboteur');
+    if (!team.attemptingSaboteur) {
+      events.add(team, 'Is attempting to become the saboteur');
+      team.attemptingSaboteur = true;
+    }
 
-    var port = crypto.createHash('md5').update(saboteurPort.toString()).digest('hex');
+    var port = crypto.createHash('sha1').update(saboteurPort.toString()).digest('hex');
 
     return res.json({
-      msg: 'connect to the TCP port ' + port + ' and send your team id',
-      hint: 'you are seeing an MD5 hash of the real port number, work out what the real port number is'
+      msg: 'connect to the TCP port whose SHA1 hash is ' + port + ' and send your team id'
     });
   });
 
   app.get('/sabotage/92hgd6s/:name', function(req, res) {
-    return res.send('team to ban: ' + req.param('name'));
+    return res.json(db.sabotageTeam(req.param('name')));
   });
 };
 
