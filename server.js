@@ -5,7 +5,7 @@ var throttle = require('./lib/throttle');
 var db = require('./lib/db');
 
 var app = express();
-throttle.enable();
+//throttle.enable();
 
 app.configure(function() {
   app.engine('html', mustachex.express);
