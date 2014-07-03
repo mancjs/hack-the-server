@@ -1,2 +1,2 @@
-# Hack Me If You Can
-Node server for the MancJS [Hack Me If You Can](http://mancjs.com/#hack-the-server) event
+# Hack The Server
+Node server for the first MancJS [Hack The Server](http://mancjs.com/#hack-the-server) event
